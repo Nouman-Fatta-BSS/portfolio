@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap');
+@import "variables.scss";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Work Sans", sans-serif;
+    // 1rem = 10px
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    color: $heading;
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+p {
+    color: $para;
+    line-height: 1.6;
+    font-size: 1.7rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/*
+ =====================
+  Reusable Code Start
+ =====================
+ */
+.container {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 9rem 0rem;
+}
+
+.grid {
+    display: grid;
+    gap: 9rem;
+}
+
+.grid-two-column {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.btn {
+    background: $gradient;
+    padding: 1.6rem 3.2rem;
+    border: none;
+    color: $hepler_tint;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:active {
+        box-shadow: $shadow_support;
+    }
+}
+
+.common-heading{
+    font-size: 4.8rem;
+    font-weight: 600;
+    margin-bottom: 6rem;
+    text-transform: capitalize;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 110%;
+        left: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $helper;
+        border-radius: 50%;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: calc(110% + 6px);
+        left: 1.5rem;
+        min-width: 20rem;
+        height: .3rem;
+        background-color: $helper;
+    }
+}
+
+/*
+ =====================
+  Reusable Code End
+ =====================
+ */
+
+
+
+/*
+ =====================
+  Header Section Start
+ =====================
+ */
+
+.header {
+    padding: 0 4.8rem;
+    height: 10rem;
+    background-color: $bg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        height: 3rem;
+    }
+
+    .navbar {
+        .navbar-list {
+            display: flex;
+            gap: 4.8rem;
+
+            .navbar-link {
+
+                &:link,
+                &:visited {
+                    display: inline-block;
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    color: $black;
+                    transition: color .3s linear;
+                }
+
+                &:hover,
+                &:active {
+                    color: $helper;
+                }
+            }
+        }
+    }
+}
+
+/*
+ =====================
+  Header Section End
+ =====================
+ */
+
+
+/*
+ =====================
+  Hero Section Start
+ =====================
+ */
+
+.hero-section {
+    background-color: $bg;
+
+    .hero-section-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .hero-top-para {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $helper;
+        }
+
+        .hero-heading {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 6.4rem;
+        }
+
+        .hero-bottom-para {
+            margin: 1.5rem 0 5rem 0;
+            max-width: 60rem;
+        }
+    }
+
+    .hero-section-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .hero-image {
+            max-width: 80%;
+        }
+    }
+}
+
+/*
+ =====================
+ Hero Section End
+ =====================
+ */
+
+
+/*
+ =====================
+ Bio Data Section Start
+ =====================
+ */
+
+.biodata-section {
+    .bio-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 80%;
+            box-shadow: -2rem -2rem 0 0 $helper;
+        }
+    }
+    .biodata-stats{
+        display: flex;
+        flex-direction: column;
+        padding: 6.4rem 0;
+        gap: 3rem;
+        .bio-stats{
+            h3{
+                margin-bottom: 1rem;
+            }
+            .bio-progress-bar{
+                background-color: $para_tint;
+                width: 90%;
+                height: 0.8rem;
+                box-shadow: $shadow;
+                border-radius: 10rem;
+                position: relative;
+            }
+        }
+    }
+}
+
+/*
+ =====================
+ Bio Data Section End
+ =====================
+ */
