@@ -65,6 +65,14 @@ li {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.grid-three-column {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four-column {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .btn {
   background: linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98, 189, 252) 100%);
   padding: 1.6rem 3.2rem;
@@ -215,16 +223,125 @@ li {
   margin-bottom: 1rem;
 }
 .biodata-section .biodata-stats .bio-stats .bio-progress-bar {
+  position: relative;
   background-color: #e4e4e4;
   width: 90%;
   height: 0.8rem;
   box-shadow: 0px 0px 20px 0px rgba(132, 144, 255, 0.2);
   border-radius: 10rem;
-  position: relative;
+}
+.biodata-section .biodata-stats .bio-stats .bio-progress-bar::before {
+  content: "";
+  border-radius: inherit;
+  background: linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98, 189, 252) 100%);
+  width: 80%;
+  position: absolute;
+  height: 100%;
+}
+.biodata-section .biodata-stats .bio-stats .bio-progress-bar span {
+  position: absolute;
+  background-color: #8490ff;
+  width: 4rem;
+  height: 2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1.8rem;
+  left: calc(80% - 20px);
+}
+.biodata-section .biodata-stats .bio-stats .bio-progress-bar span::after {
+  content: "";
+  position: absolute;
+  border: 0.8rem solid #8490ff;
+  border-color: transparent;
+  border-bottom-color: #8490ff;
+  top: -15px;
+}
+.biodata-section .biodata-stats .bio-stats .progress-2 span {
+  left: calc(70% - 20px);
+}
+.biodata-section .biodata-stats .bio-stats .progress-2::before {
+  width: 70%;
+}
+.biodata-section .biodata-stats .bio-stats .progress-3 span {
+  left: calc(65% - 20px);
+}
+.biodata-section .biodata-stats .bio-stats .progress-3::before {
+  width: 65%;
+}
+.biodata-section .biodata-stats .bio-stats .progress-4 span {
+  left: calc(50% - 20px);
+}
+.biodata-section .biodata-stats .bio-stats .progress-4::before {
+  width: 50%;
 }
 
 /*
  =====================
  Bio Data Section End
+ =====================
+ */
+/*
+ =====================
+ Portfolio Section Start
+ =====================
+ */
+.portfolio-section {
+  background-color: rgb(249, 249, 255);
+  transition: all 0.7s linear;
+}
+.portfolio-section p {
+  max-width: 60rem;
+}
+.portfolio-section .p-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  margin: 6.4rem 0;
+}
+.portfolio-section .portfolio-images {
+  gap: 3.2rem;
+}
+.portfolio-section .portfolio-images img {
+  width: 100%;
+  height: 100%;
+}
+.portfolio-section .portfolio-images .img-overlay {
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+}
+.portfolio-section .portfolio-images .img-overlay .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98, 189, 252) 100%);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+  align-items: center;
+  transform: translateY(100%);
+  transition: all 0.3s linear;
+}
+.portfolio-section .portfolio-images .img-overlay .overlay .common-heading {
+  margin: 0;
+  color: white;
+}
+.portfolio-section .portfolio-images .img-overlay .overlay .common-heading::before, .portfolio-section .portfolio-images .img-overlay .overlay .common-heading::after {
+  content: none;
+}
+.portfolio-section .portfolio-images .img-overlay:hover > .overlay {
+  transform: translateY(0);
+  opacity: 0.8;
+}
+
+/*
+ =====================
+ Portfolio Section End
  =====================
  *//*# sourceMappingURL=style.css.map */

@@ -69,6 +69,14 @@ li {
     grid-template-columns: repeat(2, 1fr);
 }
 
+.grid-three-column {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four-column {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .btn {
     background: $gradient;
     padding: 1.6rem 3.2rem;
@@ -86,13 +94,14 @@ li {
     }
 }
 
-.common-heading{
+.common-heading {
     font-size: 4.8rem;
     font-weight: 600;
     margin-bottom: 6rem;
     text-transform: capitalize;
     position: relative;
-    &::before{
+
+    &::before {
         content: "";
         position: absolute;
         top: 110%;
@@ -102,7 +111,8 @@ li {
         background-color: $helper;
         border-radius: 50%;
     }
-    &::after{
+
+    &::after {
         content: "";
         position: absolute;
         top: calc(110% + 6px);
@@ -234,27 +244,92 @@ li {
         display: flex;
         justify-content: center;
         align-items: center;
+
         img {
             width: 80%;
             box-shadow: -2rem -2rem 0 0 $helper;
         }
     }
-    .biodata-stats{
+
+    .biodata-stats {
         display: flex;
         flex-direction: column;
         padding: 6.4rem 0;
         gap: 3rem;
-        .bio-stats{
-            h3{
+
+        .bio-stats {
+            h3 {
                 margin-bottom: 1rem;
             }
-            .bio-progress-bar{
+
+            .bio-progress-bar {
+                position: relative;
                 background-color: $para_tint;
                 width: 90%;
                 height: 0.8rem;
                 box-shadow: $shadow;
                 border-radius: 10rem;
-                position: relative;
+
+                &::before {
+                    content: "";
+                    border-radius: inherit;
+                    background: $gradient;
+                    width: 80%;
+                    position: absolute;
+                    height: 100%;
+                }
+
+                span {
+                    position: absolute;
+                    background-color: $helper;
+                    width: 4rem;
+                    height: 2rem;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: 1.8rem;
+                    left: calc(80% - 20px);
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        border: 0.8rem solid $helper;
+                        border-color: transparent;
+                        border-bottom-color: $helper;
+                        top: -15px;
+                    }
+                }
+            }
+
+            .progress-2 {
+                span {
+                    left: calc(70% - 20px);
+                }
+
+                &::before {
+                    width: 70%;
+                }
+            }
+
+            .progress-3 {
+                span {
+                    left: calc(65% - 20px);
+                }
+
+                &::before {
+                    width: 65%;
+                }
+            }
+
+            .progress-4 {
+                span {
+                    left: calc(50% - 20px);
+                }
+
+                &::before {
+                    width: 50%;
+                }
             }
         }
     }
@@ -263,5 +338,80 @@ li {
 /*
  =====================
  Bio Data Section End
+ =====================
+ */
+
+
+/*
+ =====================
+ Portfolio Section Start
+ =====================
+ */
+
+.portfolio-section {
+    background-color: $bg;
+    transition: all 0.7s linear;
+
+    p {
+        max-width: 60rem;
+    }
+
+    .p-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3.2rem;
+        margin: 6.4rem 0;
+    }
+
+    .portfolio-images {
+        gap: 3.2rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .img-overlay {
+            position: relative;
+            overflow: hidden;
+            border-radius: 7px;
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: $gradient;
+                opacity: 0;
+                display: flex;
+                justify-content: center;
+                border-radius: 7px;
+                align-items: center;
+                transform: translateY(100%);
+                transition: all 0.3s linear;
+
+                .common-heading {
+                    margin: 0;
+                    color: $white;
+
+                    &::before, &::after {
+                        content: none
+                    }
+                }
+            }
+
+            &:hover>.overlay {
+                transform: translateY(0);
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+/*
+ =====================
+ Portfolio Section End
  =====================
  */
