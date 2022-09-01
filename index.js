@@ -1,3 +1,13 @@
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    autoplay: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+
 const p_btns = document.querySelector("#portfolio-section > div.p-btns");
 const btns = document.querySelectorAll("#portfolio-section > div.p-btns .p-btn");
 const portfolio_images = document.querySelectorAll(".img-overlay");
