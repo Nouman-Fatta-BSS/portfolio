@@ -581,4 +581,42 @@ li {
  ================================
  Freelancing Section End
  ================================
+ */
+/*
+ ================================
+ Contact Section Start
+ ================================
+ */
+.contact-section .contact-main {
+  max-width: 70rem;
+  margin: 0 auto;
+  margin-top: 9rem;
+  transition: all 0.3s linear;
+}
+.contact-section .contact-main .grid {
+  gap: 3.2rem;
+}
+.contact-section .contact-main form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.contact-section .contact-main input,
+.contact-section .contact-main textarea {
+  padding: 1.5rem 2rem;
+  border: 0.1rem solid #c9c9c9;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  font-family: "work sans";
+  width: 100%;
+}
+.contact-section .contact-main input[type=submit] {
+  border: none;
+  max-width: 30%;
+}
+
+/*
+ ================================
+ Contact Section End
+ ================================
  *//*# sourceMappingURL=style.css.map */
