@@ -158,7 +158,6 @@ li {
       gap: 4.8rem;
 
       .navbar-link {
-
         &:link,
         &:visited {
           display: inline-block;
@@ -415,7 +414,7 @@ li {
         }
       }
 
-      &:hover>.overlay {
+      &:hover > .overlay {
         transform: translateY(0);
         opacity: 0.8;
       }
@@ -603,7 +602,7 @@ li {
         max-width: 10rem;
         height: 10rem;
         border-radius: 50%;
-        border: .5rem solid $hepler_tint;
+        border: 0.5rem solid $hepler_tint;
       }
 
       .client-data {
@@ -613,7 +612,6 @@ li {
       }
     }
   }
-
 }
 
 /*
@@ -622,7 +620,6 @@ li {
  ================================
  */
 
-
 /*
  ================================
  Freelancing Section Start
@@ -630,12 +627,12 @@ li {
  */
 
 .freelancing-section {
-  background-image: url('../images/folio/3.jpg');
+  background-image: url("../images/folio/3.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
   position: relative;
-  transition: all .7s linear;
+  transition: all 0.7s linear;
   text-align: center;
 
   h2 {
@@ -673,7 +670,6 @@ li {
  ================================
  */
 
-
 /*
  ================================
  Contact Section Start
@@ -707,7 +703,7 @@ li {
       width: 100%;
     }
 
-    input[type=submit] {
+    input[type="submit"] {
       border: none;
       max-width: 30%;
     }
@@ -717,5 +713,82 @@ li {
 /*
  ================================
  Contact Section End
+ ================================
+ */
+
+/*
+ ================================
+ Footer Section Start
+ ================================
+ */
+
+.footer-section {
+  background-color: $heading;
+  h3 {
+    color: $white;
+    margin-bottom: 4rem;
+  }
+  .footer-about {
+    p {
+      color: #adadad;
+    }
+  }
+  .footer-links,
+  .footer-services,
+  .footer-address {
+    ul,
+    address {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      justify-content: center;
+    }
+    li,
+    a {
+      font-size: 1.8rem;
+      color: #adadad;
+      text-transform: capitalize;
+    }
+    span {
+      margin-right: 1rem;
+    }
+    p,
+    a {
+      font-style: normal;
+      color: #adadad;
+    }
+  }
+  .footer-social-icons {
+    margin: 5rem 0;
+    text-align: center;
+    .icons {
+      width: 4rem;
+      height: 4rem;
+      background-color: $icon_bg;
+      display: inline-block;
+      padding: 1.4rem 1.8rem;
+      position: relative;
+      color: $white;
+      animation: wave 3s linear infinite;
+    }
+  }
+  .footer-credits {
+    p {
+      text-align: center;
+      color: #adadad;
+    }
+  }
+  a {
+    transition: all 0.3s linear;
+    &:hover,
+    &:active {
+      color: $white;
+    }
+  }
+}
+
+/*
+ ================================
+ Footer Section End
  ================================
  */

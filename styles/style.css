@@ -619,4 +619,85 @@ li {
  ================================
  Contact Section End
  ================================
+ */
+/*
+ ================================
+ Footer Section Start
+ ================================
+ */
+.footer-section {
+  background-color: rgb(0, 10, 45);
+}
+.footer-section h3 {
+  color: white;
+  margin-bottom: 4rem;
+}
+.footer-section .footer-about p {
+  color: #adadad;
+}
+.footer-section .footer-links ul,
+.footer-section .footer-links address,
+.footer-section .footer-services ul,
+.footer-section .footer-services address,
+.footer-section .footer-address ul,
+.footer-section .footer-address address {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  justify-content: center;
+}
+.footer-section .footer-links li,
+.footer-section .footer-links a,
+.footer-section .footer-services li,
+.footer-section .footer-services a,
+.footer-section .footer-address li,
+.footer-section .footer-address a {
+  font-size: 1.8rem;
+  color: #adadad;
+  text-transform: capitalize;
+}
+.footer-section .footer-links span,
+.footer-section .footer-services span,
+.footer-section .footer-address span {
+  margin-right: 1rem;
+}
+.footer-section .footer-links p,
+.footer-section .footer-links a,
+.footer-section .footer-services p,
+.footer-section .footer-services a,
+.footer-section .footer-address p,
+.footer-section .footer-address a {
+  font-style: normal;
+  color: #adadad;
+}
+.footer-section .footer-social-icons {
+  margin: 5rem 0;
+  text-align: center;
+}
+.footer-section .footer-social-icons .icons {
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(144, 172, 208, 0.2);
+  display: inline-block;
+  padding: 1.4rem 1.8rem;
+  position: relative;
+  color: white;
+  -webkit-animation: wave 3s linear infinite;
+          animation: wave 3s linear infinite;
+}
+.footer-section .footer-credits p {
+  text-align: center;
+  color: #adadad;
+}
+.footer-section a {
+  transition: all 0.3s linear;
+}
+.footer-section a:hover, .footer-section a:active {
+  color: white;
+}
+
+/*
+ ================================
+ Footer Section End
+ ================================
  *//*# sourceMappingURL=style.css.map */
