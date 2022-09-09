@@ -767,7 +767,6 @@ li {
       background-color: $icon_bg;
       display: inline-block;
       padding: 1.4rem 1.8rem;
-      position: relative;
       color: $white;
       animation: wave 3s linear infinite;
     }
@@ -790,5 +789,31 @@ li {
 /*
  ================================
  Footer Section End
+ ================================
+ */
+/*
+ ================================
+ Scroll Section Start
+ ================================
+ */
+.scroll-top-div {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  z-index: 1;
+  .scroll-top-icon{
+    height: 4rem;
+    width: 4rem;
+    background-color: $helper;
+    display: inline-block;
+    padding: 1.4rem 1.8rem;
+    color: $heading;
+    animation: wave 3s linear infinite;
+    cursor: pointer;
+  }
+}
+/*
+ ================================
+ Scroll Section End
  ================================
  */

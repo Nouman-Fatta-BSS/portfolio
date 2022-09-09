@@ -42,6 +42,9 @@ p {
 a {
   text-decoration: none;
 }
+textarea {
+  max-width: 100%;
+}
 
 li {
   list-style: none;
@@ -79,7 +82,11 @@ li {
 }
 
 .btn {
-  background: linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98, 189, 252) 100%);
+  background: linear-gradient(
+    0deg,
+    rgb(132, 144, 255) 0%,
+    rgb(98, 189, 252) 100%
+  );
   padding: 1.6rem 3.2rem;
   border: none;
   color: #f3f4ff;
@@ -90,7 +97,8 @@ li {
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.btn:hover, .btn:active {
+.btn:hover,
+.btn:active {
   box-shadow: 0px 20px 20px 0px rgba(132, 144, 155, 0.3);
 }
 
@@ -146,7 +154,8 @@ li {
   display: flex;
   gap: 4.8rem;
 }
-.header .navbar .navbar-list .navbar-link:link, .header .navbar .navbar-list .navbar-link:visited {
+.header .navbar .navbar-list .navbar-link:link,
+.header .navbar .navbar-list .navbar-link:visited {
   display: inline-block;
   font-size: 1.8rem;
   font-weight: 500;
@@ -154,7 +163,8 @@ li {
   color: #212529;
   transition: color 0.3s linear;
 }
-.header .navbar .navbar-list .navbar-link:hover, .header .navbar .navbar-list .navbar-link:active {
+.header .navbar .navbar-list .navbar-link:hover,
+.header .navbar .navbar-list .navbar-link:active {
   color: #8490ff;
 }
 
@@ -239,7 +249,11 @@ li {
 .biodata-section .biodata-stats .bio-stats .bio-progress-bar::before {
   content: "";
   border-radius: inherit;
-  background: linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98, 189, 252) 100%);
+  background: linear-gradient(
+    0deg,
+    rgb(132, 144, 255) 0%,
+    rgb(98, 189, 252) 100%
+  );
   width: 80%;
   position: absolute;
   height: 100%;
@@ -334,7 +348,11 @@ li {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98, 189, 252) 100%);
+  background: linear-gradient(
+    0deg,
+    rgb(132, 144, 255) 0%,
+    rgb(98, 189, 252) 100%
+  );
   opacity: 0;
   display: flex;
   justify-content: center;
@@ -347,7 +365,16 @@ li {
   margin: 0;
   color: white;
 }
-.portfolio-section .portfolio-images .img-overlay .overlay .common-heading::before, .portfolio-section .portfolio-images .img-overlay .overlay .common-heading::after {
+.portfolio-section
+  .portfolio-images
+  .img-overlay
+  .overlay
+  .common-heading::before,
+.portfolio-section
+  .portfolio-images
+  .img-overlay
+  .overlay
+  .common-heading::after {
   content: none;
 }
 .portfolio-section .portfolio-images .img-overlay:hover > .overlay {
@@ -366,7 +393,11 @@ li {
  =====================
  */
 .work-section {
-  background: linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98, 189, 252) 100%);
+  background: linear-gradient(
+    0deg,
+    rgb(132, 144, 255) 0%,
+    rgb(98, 189, 252) 100%
+  );
   text-align: center;
   transition: all 0.7s linear;
   color: white;
@@ -409,7 +440,8 @@ li {
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
-.services-section .service-box:hover, .services-section .service-box:active {
+.services-section .service-box:hover,
+.services-section .service-box:active {
   transform: translateY(-3rem);
 }
 .services-section .service-box .services-icon {
@@ -424,7 +456,7 @@ li {
   justify-content: center;
   align-items: center;
   -webkit-animation: wave 3s linear infinite;
-          animation: wave 3s linear infinite;
+  animation: wave 3s linear infinite;
 }
 .services-section .service-box .services-icon::after {
   content: "";
@@ -434,7 +466,7 @@ li {
   border: 1px solid black;
   border-radius: 56% 44% 70% 30%/30% 54% 46% 70%;
   -webkit-animation: wave 5s linear infinite;
-          animation: wave 5s linear infinite;
+  animation: wave 5s linear infinite;
 }
 
 @-webkit-keyframes wave {
@@ -610,7 +642,7 @@ li {
   font-family: "work sans";
   width: 100%;
 }
-.contact-section .contact-main input[type=submit] {
+.contact-section .contact-main input[type="submit"] {
   border: none;
   max-width: 30%;
 }
@@ -680,10 +712,9 @@ li {
   background-color: rgba(144, 172, 208, 0.2);
   display: inline-block;
   padding: 1.4rem 1.8rem;
-  position: relative;
   color: white;
   -webkit-animation: wave 3s linear infinite;
-          animation: wave 3s linear infinite;
+  animation: wave 3s linear infinite;
 }
 .footer-section .footer-credits p {
   text-align: center;
@@ -692,7 +723,8 @@ li {
 .footer-section a {
   transition: all 0.3s linear;
 }
-.footer-section a:hover, .footer-section a:active {
+.footer-section a:hover,
+.footer-section a:active {
   color: white;
 }
 
@@ -700,4 +732,32 @@ li {
  ================================
  Footer Section End
  ================================
- *//*# sourceMappingURL=style.css.map */
+ */
+/*
+ ================================
+ Scroll Section Start
+ ================================
+ */
+.scroll-top-div {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  z-index: 1;
+}
+.scroll-top-div .scroll-top-icon {
+  height: 4rem;
+  width: 4rem;
+  background-color: #8490ff;
+  display: inline-block;
+  padding: 1.4rem 1.8rem;
+  color: rgb(0, 10, 45);
+  -webkit-animation: wave 3s linear infinite;
+  animation: wave 3s linear infinite;
+  cursor: pointer;
+}
+
+/*
+ ================================
+ Scroll Section End
+ ================================
+ */ /*# sourceMappingURL=style.css.map */
