@@ -143,9 +143,25 @@ footer.innerHTML = `<div class="container grid grid-four-column">
     Nouman Fatta with the help of a YouTube channel Thapa Technical
   </p>
 </div>
-</div>`
+</div>`;
 footer.after(scrollElement);
 const header = document.querySelector(".header");
 scrollElement.addEventListener("click", () => {
   header.scrollIntoView({ behavior: "smooth" });
 });
+
+const counterNumber = document
+  .querySelector(".work-section")
+  .querySelectorAll(".counter-numbers");
+const speed = 200;
+counterNumber.forEach((cur) => {
+  const updateNumber = () => {
+    const targetNumber = cur.dataset.number;
+    if (targetNumber > parseInt(cur.innerText)) {
+      cur.innerText = parseInt(cur.innerText) + 2 + "+";
+      setInterval(updateNumber, 10);
+    }
+  };
+  updateNumber();
+});
+
