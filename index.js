@@ -150,16 +150,27 @@ scrollElement.addEventListener("click", () => {
   header.scrollIntoView({ behavior: "smooth" });
 });
 
+const element = document.querySelector(".work-section");
+var bodyRect = document.body.getBoundingClientRect(),
+    elemRect = element.getBoundingClientRect(),
+    offset   = elemRect.top - bodyRect.top;
+
+console.log('Element is ' + offset + ' vertical pixels from <body>');
+
 const counterNumber = document
   .querySelector(".work-section")
   .querySelectorAll(".counter-numbers");
-const speed = 200;
+const speed = 1000;
+
 counterNumber.forEach((cur) => {
   const updateNumber = () => {
     const targetNumber = cur.dataset.number;
-    if (targetNumber > parseInt(cur.innerText)) {
-      cur.innerText = parseInt(cur.innerText) + 2 + "+";
-      setInterval(updateNumber, 10);
+    const intial = parseInt(cur.innerText);
+    const increment = Math.trunc(targetNumber / speed);
+    if (intial < targetNumber) {
+      // console.log()
+      cur.innerText = intial + increment + "+";
+      setInterval(updateNumber, 1000);
     }
   };
   updateNumber();
